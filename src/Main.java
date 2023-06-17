@@ -1,15 +1,25 @@
+package com.mycompany.matrixoperations;
+
 import java.util.Arrays;
 
 public class Main {
-
     public static void main(String[] args) {
-        int [][] matrix = new int[3][3];
-        int x=0;
+        int[][] matrixA = {
+            {1, 2, 3},
+            {4, 5, 6}
+        };
 
-        for(int[] row:matrix)
-            Arrays.fill(row,x);
+        int[][] matrixB = {
+            {7, 8},
+            {9, 10},
+            {11, 12}
+        };
 
-        for(int[] row:matrix)
+        int[][] product = MatrixOperations.multiplyMatrices(matrixA, matrixB);
+
+        // Виведення результату
+        for (int[] row : product) {
             System.out.println(Arrays.toString(row));
+        }
     }
 }
